@@ -1,0 +1,11 @@
+xor_decrypt: function takes a list of encrypted bytes (encrypted_text) and a key string (key), and decrypts the bytes
+using the XOR encryption/decryption algorithm by XOR-ing each byte with the corresponding byte from the key using
+modular arithmetic to wrap around the key as necessary. The resulting decrypted bytes are then converted to characters
+using the ASCII encoding, and appended to a string that represents the decrypted text. The function returns the
+decrypted text as a string.
+
+guess_key: function takes an encrypted text as a list of integers (encrypted_text) and a key size (key_size),
+and iterates over all possible keys of length key_size to decrypt the text using the xor_decrypt function.
+Each possible key and decrypted text pair that meets the criteria of containing only printable ASCII characters is
+added to a list of matches, which is returned at the end of the function.
+
